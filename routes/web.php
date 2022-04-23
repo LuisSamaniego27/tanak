@@ -19,3 +19,8 @@ Route::get('/', function () {
 
 //Barrio
 Route::resource('barrios','App\Http\Controllers\BarrioController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
